@@ -200,10 +200,9 @@ if pooled_stake > total_stake / 2:
         hybrid_blockchain.eject_malicious_miner(malicious_miners)
         print("\nBlockchain valid after ejecting malicious miners:",
             hybrid_blockchain.is_chain_valid())
-
-    # Restore the blockchain if necessary
-    if pooled_stake > total_stake / 2:
+        # Restore the blockchain if necessary
         hybrid_blockchain.restore_blockchain()
+
 
     # Re-mine the block after restoration
     print("\n--- Re-mining Block after restoration ---")
